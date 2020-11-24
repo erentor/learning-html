@@ -1,0 +1,50 @@
+<html>
+
+    <head>
+        <title>number guessing game</title>
+    </head>
+
+    <body>
+        <p> I am thinking of a number between 1 and 100 what is it?</p>
+        <input type="text" value="" name="numberinput" id="numberinput" />
+        <div>
+            <button onclick="guess(document.getElementById('numberinput').value)">Click here to guess</button>
+        </div>
+        <div>
+            <button onclick="setupplay()">Play again</button>
+        </div>
+        <ol id="orderedlist">
+
+        </ol>
+        <script>
+            var mynumber = 0;
+            function setupplay() {
+                mynumber = Math.floor(Math.random() * 100) + 1;
+                document.getElementById("orderedlist").innerHTML = "";
+            }
+            setupplay();
+            function showmyguess(something){
+                document.getElementById("orderedlist").insertAdjacentHTML("beforeend", something);
+            }
+            function guess(something) {
+                if (something < mynumber) {
+                  showmyguess( "<li>the number is higher than " + something + "</li>");
+                }
+                else if (something > mynumber) {
+                    showmyguess( "<li>the number is lower than" + something + "</li>");
+                }
+                else if (something == mynumber) {
+                    showmyguess( "<li style=\"font-weight:bold; color:green;\">Correct!</li>"); 
+                }
+                else {
+                    showmyguess( " <li style=\"font-weight:bold; color:red;\":>please enter a number </li>")
+                }
+
+
+            }
+
+        </script>
+        
+    </body>
+
+</html>

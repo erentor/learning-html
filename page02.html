@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>I love my family</title>
+        <style>
+            .mybox
+            {
+                display: inline-block; text-align:center; background-color:orange; padding:10px; 
+                border: 10px solid orangered; margin: 10px;
+            }
+            .mybox>div {
+                display:block; text-align:center; padding:5px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;     
+            }
+            .mybox>img{
+                width:300px; display:block; height:250px 
+            }
+            .something{
+                list-style:none;
+                width: 200px; display:inline-block; border: 1px solid black; padding: 0px; 
+                background-color: orange; margin: 10px; vertical-align: bottom; 
+            }
+            .something>li{
+                 border: 1px solid black; padding: 5px; 
+                 cursor:pointer;    
+            }
+            .something>li:hover{
+                background-color:orangered; 
+            }
+            .Ferhan .mybox:nth-of-type(3),
+            .Eren .mybox:nth-of-type(1),
+            .Yavuz .mybox:nth-of-type(2),
+            .Ferhan .something>li:nth-of-type(1),
+            .Eren .something>li:nth-of-type(3),
+            .Yavuz .something>li:nth-of-type(2){
+                background-color:blue; 
+            }
+        </style>
+    </head>
+
+    <body style="color:black">
+        <h2><script>document.write(new Date().tolacaleString())</script></h2>
+        <ul class="something">
+           <li onclick="document.body.className='Ferhan' ">Ferhan</li>
+           <li onclick="document.body.className='Yavuz' ">Yavuz</li>
+           <li onclick="document.body.className='Eren' ">Eren</li>  
+        </ul>
+        <figure class="mybox">
+        <div >
+            foxy is cute 
+        </div>
+        <img src="foxycute.jpg"  /> 
+    </figure>
+        <figure class="mybox">
+        <div >
+            flowers
+        </div>
+        <img src="http://weknowyourdreams.com/images/daisy/daisy-06.jpg"  />
+    </figure>
+        <figure class="mybox">
+            <div>
+                somewhere over the rainbow
+            </div>
+            <img src="https://wallpapertag.com/wallpaper/full/4/b/6/830599-ocean-view-wallpaper-2560x1560-full-hd.jpg"   />
+        </figure>
+        <div>
+        <label>
+            <input type="radio" name="family" value="yes" /> Ferhan likes the ocean 
+        </label>
+        <label>
+            <input type="radio" name="family" value="yes" /> Yavuz likes daisies
+        </label>
+        <label>
+            <input type="radio" name="family" value="yes" /> Eren likes Foxes
+        </label>
+        <form>
+        <button>Press here to submit</button>
+        </div>
+        <textarea rows="10" cols="50" name="comments for something">Type comment here...</textarea>
+        </form>
+        </form>
+        <label>who is the best?</label>
+        <select name="who is the best?">
+        <option>Ferhan</option>
+        <option>Yavuz</option>
+        <option>Eren</option>
+        <option selected>none</option>
+        </select>
+        <div>
+            <label>
+                <input type="checkbox" name="Are you happy?" value="yes" />Are you happy?
+            </label>
+        </div>
+    </body>
+</html>
