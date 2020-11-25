@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>newproject</title>    
+    </head>
+    <body>
+        <h1 id="text">something is nothing so everything is something and nothing is something</h1>
+        <script>
+            var textNode=document.getElementById("text")
+            var text=textNode.innerText
+            console.log(text)
+            var upper=text.toUpperCase();
+            textNode.innerHTML="" + upper; 
+        </script>
+    </body>
+</html>

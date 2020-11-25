@@ -1,7 +1,11 @@
+<!DOCTYPE html>
 <html>
 
-    <head>
+    <head lang="en" >
         <title>number guessing game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     </head>
 
     <body>
@@ -11,7 +15,7 @@
             <button onclick="guess(document.getElementById('numberinput').value)">Click here to guess</button>
         </div>
         <div>
-            <button onclick="setupplay()">Play again</button>
+            <button onclick="setupplay(); changetitle('playing again')">Play again</button>
         </div>
         <ol id="orderedlist">
 
@@ -37,12 +41,17 @@
                     showmyguess( "<li style=\"font-weight:bold; color:green;\">Correct!</li>"); 
                 }
                 else {
-                    showmyguess( " <li style=\"font-weight:bold; color:red;\":>please enter a number </li>")
+                    showmyguess( " <li style=\"font-weight:bold; color:red;\":>please enter a number </li> ")
+                    alert("please enter a number"); 
                 }
+               
 
 
             }
-
+            function changetitle(title){
+                document.title=title;
+            
+            } 
         </script>
         
     </body>
