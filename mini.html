@@ -4,11 +4,13 @@
      <title>mini</title>
     </head>
     <body>
-        <h1 id="something"> nothing is soemthing</h1>
+        <h1 id="something"> nothing is soemthing aja aja aja aja ajaa </h1>
         <h1>
             I have two cats
             <span id="catname">something</span> 
         </h1>
+        <h1 id="sentence"> something osmethign somethig baj ajfa ajaj </h1>
+    
     
     
     
@@ -22,6 +24,20 @@
     var catname=document.getElementById("catname");
     var oldText=catname.innerHTML;
     catname.innerHTML="<u>something</u> is my favorite cat's name";
+    var sentenceNode = document.getElementById("sentence");
+    var sentence=sentenceNode.innerText;
+    var upperSentence = sentence.toUpperCase();
+    var lowerSentence = sentence.toLowerCase();
+    var firsttenchars = sentence.substr(0, 5);
+    sentence.split(" ");
+    var allWords = sentence.split(" ")
+    allWords.push("yavuznothing")
+    var bracketWords = "("+ allWords.join("=======") + ")";
+ 
+    var firstthreewords = allWords.slice(0, 3);
+    var middlewords = allWords.slice(3, 6)
+    var makesentence = middlewords.join(" ");
+    sentence.innerText = makesentence;
 
 
     </script>
