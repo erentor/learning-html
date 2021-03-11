@@ -1,19 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
 <title>Can't think of title</title>
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
 
 <p id="paragraph" name="paragraphofunknown">If you can't think of <strong>any</strong> name I can generate a name for you</p>
 <p id="slkdjflk" name="nameblank">_</p>
+<p> I am thinking of a number between 1 and 100 what is it?</p>
+        <input type="text" value="" name="numberinput" id="numberinput" />
+        <div>
+            <button onclick="guess(document.getElementById('numberinput').value)">Click here to guess</button>
+        </div>
+        <div>
+            <button onclick="setupplay(); changetitle('playing again')">Play again</button>
+        </div>
+        <ol id="orderedlist">
+
+        </ol>
+        <input type="text" value="" name="numberinput" id="numberinput" />
     <script>
 var randomnumber = Math.random();
 var namehere = prompt("what is your name");
+var randomperson = document.getElementById(namehere);
+var radomsnumbers = document.getElementById(randomnumber)
  
 
-var newstring = "your name should appear here" +  namehere +"" + randomnumber;
+var newstring = "your name should appear here" + randomperson + "" + randomsnumbers;
+
+var mynumber = 0;
+            function setupplay() {
+                mynumber = Math.floor(Math.random() * 100) + 1;
+                document.getElementById("orderedlist").innerHTML = "";
+            }
+            setupplay();
+            function showmyguess(something){
+                document.getElementById("orderedlist").insertAdjacentHTML("beforeend", something);
+            }
+            function guess(something) {
+                if (something < mynumber) {
+                  showmyguess( "<li>the number is higher than " + something + "</li>");
+                }
+                else if (something > mynumber) {
+                    showmyguess( "<li>the number is lower than" + something + "</li>");
+                }
+                else if (something == mynumber) {
+                    showmyguess( "<li style=\"font-weight:bold; color:green;\">Correct!</li>"); 
+                }
+                else {
+                    showmyguess( " <li style=\"font-weight:bold; color:red;\":>please enter a number </li> ")
+                    alert("please enter a number"); 
+                }
+               
+
+
+            }
+            function changetitle(title){
+                document.title=title;
+            
+            } 
+
 
     </script>
 </body>
